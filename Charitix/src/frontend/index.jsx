@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ForgeReconciler, { Text, Button, Image } from '@forge/react';
 import { invoke } from '@forge/bridge';
-import { fetch } from '@forge/api';
 
 const App = () => {
   const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   invoke('getText', { example: 'my-invoke-variable' }).then(setData);
-  // }, []);
+  // const [orders, setOrders] = useState(null);
+  // const [event, setEvent] = useState(null);
 
   useEffect(() => {
     invoke('getEvents').then(setData);
