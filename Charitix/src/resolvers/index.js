@@ -21,8 +21,8 @@ resolver.define('getEvents', async () => {
   return data
 })
 
-resolver.define('getOrders', async (eventID) => {
-  const response = await fetch("https://api.humanitix.com/v1/events/"+{eventID}+"/orders?page=1", {
+resolver.define('getOrders', async () => {
+  const response = await fetch(`https://api.humanitix.com/v1/events/668239621be989e4212bf3cc/orders?page=1`, {
     method:"GET",
     headers: {
         'Accept': 'application/json',
@@ -30,6 +30,7 @@ resolver.define('getOrders', async (eventID) => {
     }
   })
   const data = await response.json()
+  console.log(data)
   return data
 })
 
