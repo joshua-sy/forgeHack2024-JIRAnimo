@@ -1,0 +1,18 @@
+modules:
+  macro:
+    - key: charitix-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Charitix
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/b2bab025-d78a-4a2d-964d-19b946e807b1
