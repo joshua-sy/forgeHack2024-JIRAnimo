@@ -12,6 +12,12 @@ modules:
 resources:
   - key: main
     path: src/frontend/index.jsx
+permissions:
+  external:
+    fetch:
+      backend:
+        - 'https://api.humanitix.com'
+        - api.openweathermap.org
 app:
   runtime:
     name: nodejs18.x
