@@ -25,9 +25,9 @@ const App = () => {
       <Text>{data 
       ? <>
       {}
-      {data.name} 
-      {data.description}
-      
+      {data.events[0]['name']} 
+      {data.events[0]['description']}
+      <Image src={data.events[0]['bannerImage']['url']}></Image>
       </>
       : 'Loading...'}</Text>
     </>

@@ -18,6 +18,8 @@ permissions:
       backend:
         - 'https://api.humanitix.com'
         - api.openweathermap.org
+    images:
+      - 'https://cdn.filestackcontent.com'
 app:
   runtime:
     name: nodejs18.x
